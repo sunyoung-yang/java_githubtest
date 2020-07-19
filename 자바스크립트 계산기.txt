@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+
+	function add(){
+		var n1 = parseInt(document.getElementById("num1").value);
+		var n2 = parseInt(document.getElementById("num2").value);	//입력된 숫자는 문자여서 계산을 위해 parse()함수를 이용하여 문자를 숫자로 변환
+		var sum = n1+n2;
+		document.getElementById("result").value=sum; 
+	}
+	
+	function sub(){
+		var n1 = parseInt(document.getElementById("num1").value);
+		var n2 = parseInt(document.getElementById("num2").value);
+		var sub = n1-n2;
+		document.getElementById("result").value=sub;
+	}
+	
+	function mul(){
+		var n1 = parseInt(document.getElementById("num1").value);
+		var n2 = parseInt(document.getElementById("num2").value);
+		var mul = n1*n2;
+		document.getElementById("result").value=mul;
+	}
+
+	function div(){
+		var n1 = parseInt(document.getElementById("num1").value);
+		var n2 = parseInt(document.getElementById("num2").value);
+		var div = n1/n2;
+		document.getElementById("result").value=div;
+	}
+	
+	
+</script>
+</head>
+	<body>
+		<h2>Calculator</h2>
+		<table>
+		<tr>
+			<td>num1</td>
+			<td><input type="text" id="num1" size="10"></td>
+		</tr>
+		<tr>
+			<td>num2</td>
+			<td><input type="text" id="num2" size="10"></td>
+		</tr>
+		<tr>
+			<td colspan = 2>
+			<input type="button" value="+" onclick="add()"> <!--onload는 내장함수로 클릭시 지정된 함수 실행 -->
+			<input type="button" value="-" onclick="sub()">
+			<input type="button" value="*" onclick="mul()">
+			<input type="button" value="/" onclick="div()">
+			</td>
+		
+		</tr>
+		<tr>
+			<td>result</td>
+			<td><input type="text" id="result" size="10"></td>
+		</tr>
+		
+		
+		
+		</table>
+	</body>
+</html>
